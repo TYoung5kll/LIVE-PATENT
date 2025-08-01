@@ -7,7 +7,8 @@ import {
   Settings, 
   Zap,
   Shield,
-  X
+  X,
+  Presentation as PresentationIcon
 } from 'lucide-react'
 
 const Sidebar = ({ currentPage, setCurrentPage, sidebarOpen, setSidebarOpen }) => {
@@ -42,6 +43,12 @@ const Sidebar = ({ currentPage, setCurrentPage, sidebarOpen, setSidebarOpen }) =
       name: 'Settings', 
       icon: Settings,
       description: 'Configure your app'
+    },
+    { 
+      id: 'presentation', 
+      name: 'Presentation', 
+      icon: PresentationIcon,
+      description: 'Professional slides'
     },
   ]
 

@@ -7,6 +7,7 @@ import Analytics from './components/Analytics'
 import Settings from './components/Settings'
 import LiveMessaging from './components/LiveMessaging'
 import QuickActions from './components/QuickActions'
+import Presentation from './components/Presentation'
 
 function App() {
   const [currentPage, setCurrentPage] = useState('dashboard')
@@ -25,6 +26,8 @@ function App() {
         return <Analytics />
       case 'settings':
         return <Settings />
+      case 'presentation':
+        return <Presentation />
       default:
         return <Dashboard />
     }
