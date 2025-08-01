@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import { Send, Mail, MessageSquare, Users, CheckCircle, AlertCircle, Settings, Shield } from 'lucide-react'
+import { Send, Mail, MessageSquare, Users, CheckCircle, AlertCircle, Settings, Shield, Eye } from 'lucide-react'
 import liveApiService from '../services/api'
+import MessagePreview from './MessagePreview'
 
 const LiveMessaging = () => {
   const [message, setMessage] = useState('')
@@ -11,6 +12,7 @@ const LiveMessaging = () => {
   const [loading, setLoading] = useState(false)
   const [result, setResult] = useState(null)
   const [messageHistory, setMessageHistory] = useState([])
+  const [showPreview, setShowPreview] = useState(false)
   const [stats, setStats] = useState({
     totalMessages: 0,
     emailsSent: 0,
@@ -106,14 +108,23 @@ const LiveMessaging = () => {
           <p className="text-gray-600">Encrypted SMS and Email Messaging Service</p>
           <p className="text-xs text-gray-500 mt-1">Patent Owner: Theodore G. Young Jr</p>
         </div>
-        <button
-          onClick={testConnection}
-          disabled={loading}
-          className="btn-secondary flex items-center space-x-2"
-        >
-          <Shield size={16} />
-          <span>{loading ? 'Testing...' : 'Test Connection'}</span>
-        </button>
+        <div className="flex space-x-3">
+          <button
+            onClick={() => setShowPreview(!showPreview)}
+            className="btn-secondary flex items-center space-x-2"
+          >
+            <Eye size={16} />
+            <span>{showPreview ? 'Hide Preview' : 'Show Preview'}</span>
+          </button>
+          <button
+            onClick={testConnection}
+            disabled={loading}
+            className="btn-secondary flex items-center space-x-2"
+          >
+            <Shield size={16} />
+            <span>{loading ? 'Testing...' : 'Test Connection'}</span>
+          </button>
+        </div>
       </div>
 
       {/* Stats Cards */}
@@ -186,6 +197,21 @@ const LiveMessaging = () => {
             )}
             <span>{result.message}</span>
           </div>
+        </div>
+      )}
+
+      {/* Message Preview */}
+      {showPreview && (
+        <div className="card">
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">📱 Mobile Preview</h3>
+          <p className="text-gray-600 dark:text-gray-400 mb-6">
+            See exactly how your message will appear on recipient's phone
+          </p>
+          <MessagePreview 
+            companyName={companyName || "Your Company"} 
+            message={message || "Hi! This is a preview of how your message will look on mobile devices."}
+            recipientName="John Doe"
+          />
         </div>
       )}
 
