@@ -1,16 +1,18 @@
-# Modern App
+# LIVE Dashboard
 
-A beautiful, modern web application built with React, Vite, and Tailwind CSS. This frontend application is designed to seamlessly integrate with your existing encrypted backend.
+A beautiful, modern web application built with React, Vite, and Tailwind CSS. This frontend dashboard is designed to seamlessly integrate with the LIVE encrypted messaging service by Theodore G. Young Jr.
 
 ## ✨ Features
 
+- **LIVE Messaging**: Encrypted SMS and Email messaging with white-label branding
 - **Modern UI/UX**: Beautiful, responsive design with Tailwind CSS
 - **Dashboard**: Real-time analytics and metrics visualization
 - **Task Management**: Complete CRUD operations for task management
 - **Analytics**: Data visualization with charts and reports
 - **Settings**: Comprehensive configuration management
-- **Backend Ready**: Easy integration with your encrypted backend
+- **HTTPS Ready**: Full SSL encryption and secure communication
 - **Responsive**: Mobile-first design that works on all devices
+- **Patent Protected**: LIVE messaging service by Theodore G. Young Jr
 
 ## 🚀 Quick Start
 
@@ -30,10 +32,10 @@ A beautiful, modern web application built with React, Vite, and Tailwind CSS. Th
    ```bash
    cp .env.example .env
    ```
-   Edit `.env` file with your backend configuration:
+   Edit `.env` file with your LIVE service configuration:
    ```env
-   REACT_APP_API_URL=https://your-backend.com/api
-   REACT_APP_ENCRYPTION_KEY=your-encryption-key
+   REACT_APP_API_URL=https://your-domain.com:443/api
+   REACT_APP_DEFAULT_COMPANY_NAME=Your Company Name
    ```
 
 3. **Start the development server:**
@@ -43,6 +45,29 @@ A beautiful, modern web application built with React, Vite, and Tailwind CSS. Th
 
 4. **Open your browser:**
    Navigate to `http://localhost:3000`
+
+## 📱 LIVE Messaging Integration
+
+This dashboard integrates directly with your LIVE encrypted messaging service. The messaging service supports:
+
+### 🔐 Security Features
+- **HTTPS Encryption**: All communications over SSL/TLS
+- **Hidden SSL Keys**: Private keys stored securely in `/ssl` directory
+- **No Payload Logging**: Secure communication without logging sensitive data
+- **Patent Protection**: U.S. Patent Pending by Theodore G. Young Jr
+
+### 📧 White-Label Messaging
+- **Brand-Specific Labels**: Messages appear from your company name
+- **Dual Delivery**: Send via Email, SMS, or both simultaneously
+- **SendGrid Integration**: Professional email delivery
+- **Twilio Integration**: Reliable SMS delivery
+
+### 🏢 Perfect For
+- Real estate agents
+- Insurance brokers
+- Franchise businesses
+- Marketing agencies
+- Any business needing branded communication
 
 ## 🔧 Backend Integration
 

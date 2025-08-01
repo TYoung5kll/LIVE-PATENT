@@ -5,6 +5,7 @@ import Dashboard from './components/Dashboard'
 import TaskManager from './components/TaskManager'
 import Analytics from './components/Analytics'
 import Settings from './components/Settings'
+import LiveMessaging from './components/LiveMessaging'
 
 function App() {
   const [currentPage, setCurrentPage] = useState('dashboard')
@@ -13,6 +14,8 @@ function App() {
     switch (currentPage) {
       case 'dashboard':
         return <Dashboard />
+      case 'messaging':
+        return <LiveMessaging />
       case 'tasks':
         return <TaskManager />
       case 'analytics':

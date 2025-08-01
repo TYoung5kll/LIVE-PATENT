@@ -1,9 +1,10 @@
 import React from 'react'
-import { Menu, Search, Bell, User, BarChart3, CheckSquare, Settings, Home } from 'lucide-react'
+import { Menu, Search, Bell, User, BarChart3, CheckSquare, Settings, Home, MessageSquare } from 'lucide-react'
 
 const Header = ({ currentPage, setCurrentPage }) => {
   const navigation = [
     { id: 'dashboard', name: 'Dashboard', icon: Home },
+    { id: 'messaging', name: 'LIVE Messaging', icon: MessageSquare },
     { id: 'tasks', name: 'Tasks', icon: CheckSquare },
     { id: 'analytics', name: 'Analytics', icon: BarChart3 },
     { id: 'settings', name: 'Settings', icon: Settings },
@@ -17,9 +18,9 @@ const Header = ({ currentPage, setCurrentPage }) => {
           <div className="flex items-center space-x-8">
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">M</span>
+                <span className="text-white font-bold text-lg">L</span>
               </div>
-              <h1 className="text-xl font-bold text-gray-900">Modern App</h1>
+              <h1 className="text-xl font-bold text-gray-900">LIVE Dashboard</h1>
             </div>
             
             <nav className="hidden md:flex space-x-1">
